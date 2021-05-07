@@ -2,3 +2,6 @@ node_modules/
 .vscode/
 .dist/
 .cache/
+
+# Wintersmith generated docs dir.
+docs/build
