@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Requestron | Demo</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Email Requestron</h1>
+      <h1>Email Requestron</h1>
     </header>
     <div class="container">
-        <form action="#" method="post">
-            <label for="form_id">Name</label>
-            <input type="text" id="form_id">
+      <div class="form_container">
+        <form action="/" method="post">
+          <div class="form_label">
+            <label for="form_name">Name</label>
+            <input type="text" id="form_name" name="name" />
+          </div>
+          <div class="form_email">
+            <label for="form_email">Email</label>
+            <input type="email" id="form_email" name="email" />
+          </div>
+          <form_category>
+            <label for="form_category">Category</label>
+            <select name="category" id="form_category">
+              <option value="voice issue">Voice Issue</option>
+              <option value="data issue">Data Issue</option>
+              <option value="hardware issue">Hardware Issue</option>
+              <option value="other">Other</option>
+            </select>
+          </form_category>
+          <div class="form_message">
+            <label for="form_message">Message</label>
+            <textarea
+              name="message"
+              id="form_message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button type="submit">Submit</button>
         </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>
