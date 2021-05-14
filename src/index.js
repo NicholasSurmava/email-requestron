@@ -54,13 +54,14 @@ app.post(
   }
 );
 
-app.get("/success", (req, res) => {
-  res.json({ message: "success!" });
-});
+// TODO: V2 - Implement API routes
+// app.get("/api/v1/success", (req, res) => {
+//   res.json({ message: "success!" });
+// });
 
-app.get("/fail", (req, res) => {
-  res.json({ message: "fail... :(" });
-});
+// app.get("/api/v1/fail", (req, res) => {
+//   res.json({ message: "fail... :(" });
+// });
 
 app.get("/heartbeat", (req, res) => {
   res.json({ heartbeat: "badum badum badum" });
