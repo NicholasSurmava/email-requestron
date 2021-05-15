@@ -1,6 +1,6 @@
 node_modules/
 .vscode/
-.dist/
+dist/
 .cache/
 
 # Wintersmith generated docs dir.

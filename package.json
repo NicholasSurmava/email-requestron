@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server",
+    "dev:pub": "parcel watch src/public/index.js -d src/public/dist",
     "docs:dev": "cd docs && wintersmith preview",
     "docs:build": "cd docs && wintersmith build"
   },
@@ -23,6 +24,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
+    "normalize.css": "^8.0.1",
     "wintersmith": "^2.5.0"
   },
   "devDependencies": {
