@@ -18,6 +18,9 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+// TODO: Handle multiple teams or multiple forms, generate dynamically
+// ? Split different teams into different endpoints.
+// ? Allow for multiple forms through configuration
 app.post(
   "/",
   [
