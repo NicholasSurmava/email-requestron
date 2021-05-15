@@ -21,7 +21,12 @@ app.get("/", (req, res) => {
 app.post(
   "/",
   [
-    check("name")
+    check("first_name")
+      .isLength({ min: 3 })
+      .withMessage("Must be at least 3 chars long")
+      .isAlpha()
+      .withMessage("Must be only alphabetical chars"),
+    check("last_name")
       .isLength({ min: 3 })
       .withMessage("Must be at least 3 chars long")
       .isAlpha()
@@ -42,14 +47,15 @@ app.post(
       return res.status(422).render("fail", data);
     } else {
       const data = {
-        name: req.body.name,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
         email: req.body.email,
         category: req.body.category,
         message: req.body.message,
       };
 
       console.log(data);
-      res.render("success");
+      res.render("success", data);
     }
   }
 );
